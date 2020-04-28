@@ -1,0 +1,114 @@
+*{
+    height: 100%;
+}
+
+.container{
+    display: grid;
+    grid-gap: 7px;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 10% 1fr 1fr 10%;
+    grid-template-areas: 
+    'a a a'
+    'b c c'
+    'd d d'
+    'e e e';    
+}
+
+.p {
+    height: 5px;
+}
+
+.item {
+    background-color: cyan;
+}
+
+.a {
+    grid-area: a;
+    display: flex;
+    justify-content: center;
+}
+
+.b {
+    grid-area: b;
+}
+
+.c {
+    grid-area: c;
+}
+
+.d {
+    grid-area: d;
+}
+
+.e {
+    grid-area: e;
+    display: flex;
+    justify-content: center;
+}
+
+/*Pseudo-Classes*/
+
+:root {
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+}
+
+a {
+    text-decoration: none;
+}
+a:active {
+    color: yellow;
+}
+
+h2:hover {
+    color: goldenrod;
+    font-size: 40px;
+}
+
+input:required {
+    border: 2px solid #333;
+}
+
+input:optional {
+    margin: 30px;
+}
+
+input:checked {
+    margin: 70px;
+}
+
+br:empty {
+    line-height: 30px;
+}
+
+p:last-of-type {
+    line-height: 50px;
+}
+
+p:hover {
+    font-weight: 700;
+}
+
+/*Pseudo-Elements*/
+
+h1::after {
+    content: "🔥";
+    padding-left: 1rem;
+}
+
+h1::before {
+    content: "🔥";
+    padding-right: 1rem;
+}
+
+h4::first-letter {
+    font-size: 50px;
+}
+
+h3::first-line {
+    background-color: grey;
+    color: lightgoldenrodyellow;
+}
+
+h4::selection {
+    background-color: yellowgreen;
+}
